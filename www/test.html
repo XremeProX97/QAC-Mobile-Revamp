@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>QAC Network Login.</title>
+        <link rel="stylesheet" type="text/css" href="/www/backend-stuff/styles.css">
+        <link rel="icon" type="image/x-icon" href="/public/images/favicon/favicon.ico">
+    </head>
+    <body>
+        <div class="main-container" style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column;">
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    fetch('/www/images')
+                        .then(response => response.json())
+                        .then(images => {
+                            const carouselInner = document.querySelector('.carousel-inner');
+                            images.forEach(image => {
+                                const imgElement = document.createElement('img');
+                                imgElement.src = `/www/images/carousel/${image}`;
+                                imgElement.alt = image;
+                                imgElement.style.width = '100%';
+                                carouselInner.appendChild(imgElement);
+                            });
+                        });
+                });
+            </script>
+            <img src="/www/images/logo/QAC Logo.webp" alt="QAC Logo" class="logo"><br><br><br>
+            <form action="/login" method="post" class="login-form" style="text-align: center;">
+            <label for="username">Username:</label>
+            <br><br><input type="text" id="username" name="username" required>
+            <br><br><label for="password">Password:</label>
+            <br><br><input type="password-insert" id="password" name="password" required>
+            <br><br><button type="login-button">Login</button>
+            </form>
+        </div>
+        <div class="carousel" style="width: 100%; overflow: hidden; position: absolute; bottom: 0;">
+            <div class="carousel-inner" style="display: flex; animation: scroll 10s linear infinite;">
+            </div>
+    </body>
+    <footer class="main-footer">
+        Please note that this is a test page and is not the final product. <br> Expect changes to be made in the future.
+    </footer>
+</html>

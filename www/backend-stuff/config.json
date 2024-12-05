@@ -1,0 +1,14 @@
+{
+    "LoginServerName": "MyLoginServerName",
+    "LoginServerPort": "MyLoginServerPort",
+    "LoginServerProtocol": "MyLoginServerProtocol",
+    "LoginServerPath": "MyLoginServerPath",
+    "ImageServerName": "MyImageServerName",
+    "ImageServerPort": "MyImageServerPort",
+    "ImageServerProtocol": "MyImageServerProtocol",
+    "ImageServerPath": "MyImageServerPath",
+    "ImageServerUploadPath": "MyImageServerUploadPath",
+    "ImageServerUploadPort": "MyImageServerUploadPort",
+    "ImageServerUploadProtocol": "MyImageServerUploadProtocol",
+    "ImageServerUploadName": "MyImageServerUploadName"
+}
